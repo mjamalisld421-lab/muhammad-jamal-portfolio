@@ -41,9 +41,12 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 7rem;
 }
 
 body {
+  min-width: 320px;
+  overflow-x: hidden;
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), sans-serif;
@@ -57,6 +60,14 @@ body {
 
 a {
   text-underline-offset: 0.2em;
+}
+
+.hero-grid {
+  background-image:
+    linear-gradient(to right, rgb(185 198 193 / 0.3) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(185 198 193 / 0.3) 1px, transparent 1px);
+  background-size: 48px 48px;
+  mask-image: linear-gradient(to bottom, black, transparent 85%);
 }
 
 @media (prefers-reduced-motion: reduce) {
