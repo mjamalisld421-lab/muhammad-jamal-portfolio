@@ -17,15 +17,18 @@ export function Hero() {
           <h1 className="text-balance text-5xl font-semibold leading-[0.96] tracking-[-0.065em] text-foreground sm:text-7xl lg:text-[5.5rem]">
             {profile.name}
           </h1>
-          <p className="mt-7 max-w-3xl text-balance text-2xl font-medium leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
+          <p className="mt-6 text-lg font-semibold tracking-[-0.02em] text-accent-strong sm:text-xl">
+            Software Engineer <span className="text-border-strong">/</span> Full-Stack Developer
+          </p>
+          <p className="mt-4 max-w-3xl text-balance text-2xl font-medium leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
             Building modern web products, developer tools, backend systems, and applied AI.
           </p>
           <p className="mt-6 max-w-2xl text-pretty text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
             Software Engineering graduate and full-stack developer working across Next.js, TypeScript, databases, .NET, and computer vision.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
-            <Button href="#projects">View selected work</Button>
-            <Button href="https://github.com/mjamalisld421-lab" target="_blank" rel="noreferrer" variant="secondary">
+            <Button href="#projects">View projects</Button>
+            <Button href="https://github.com/mjamalisld421-lab" target="_blank" rel="noopener noreferrer" variant="secondary">
               GitHub <span aria-hidden="true">↗</span>
             </Button>
             <Button href="#contact" variant="ghost">Contact me</Button>

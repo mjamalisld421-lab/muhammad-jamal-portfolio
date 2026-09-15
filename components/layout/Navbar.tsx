@@ -37,12 +37,12 @@ export function Navbar() {
             Email me
           </a>
         </nav>
-        <nav className="-mx-5 flex gap-1 overflow-x-auto px-5 pb-3 md:hidden" aria-label="Mobile navigation">
-          {navItems.slice(0, 4).map((item) => (
+        <nav className="grid grid-cols-5 pb-3 md:hidden" aria-label="Mobile navigation">
+          {navItems.map((item) => (
             <a
               key={item.href}
               href={item.href}
-              className="min-h-10 shrink-0 rounded-full px-3.5 py-2 text-sm font-medium text-muted-foreground hover:bg-surface-raised hover:text-foreground focus-visible:outline-2 focus-visible:outline-accent"
+              className="flex min-h-10 items-center justify-center rounded-full px-1 py-2 text-[0.6875rem] font-medium text-muted-foreground hover:bg-surface-raised hover:text-foreground focus-visible:outline-2 focus-visible:outline-accent sm:text-xs"
             >
               {item.label}
             </a>

@@ -15,7 +15,7 @@ export function Contact() {
             <div className="mt-8 flex flex-wrap gap-3">
               <Button href="mailto:mjamalisld421@gmail.com" className="bg-white text-foreground hover:bg-accent-subtle">Send an email</Button>
               {socialLinks.filter((link) => link.label !== "Email").map((link) => (
-                <Button key={link.label} href={link.href} target="_blank" rel="noreferrer" variant="ghost" className="border border-white/20 text-white hover:bg-white/10">{link.label} <span className="ml-1" aria-hidden="true">↗</span></Button>
+                <Button key={link.label} href={link.href} target="_blank" rel="noopener noreferrer" variant="ghost" className="border border-white/20 text-white hover:bg-white/10">{link.label} <span className="ml-1" aria-hidden="true">↗</span></Button>
               ))}
             </div>
           </div>
