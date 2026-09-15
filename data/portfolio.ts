@@ -6,9 +6,9 @@ export const profile = {
   location: "Islamabad, Pakistan",
   email: "mjamalisld421@gmail.com",
   summary:
-    "Final-year Software Engineering student focused on building practical full-stack products, developer tooling, backend systems, and applied AI solutions.",
+    "Software Engineering graduate and full-stack developer building practical web applications, developer tooling, backend systems, and applied AI solutions.",
   about: [
-    "I am a final-year BS Software Engineering student at IQRA University with a focus on full-stack development using React, Next.js, and TypeScript. My work also spans backend services, databases, .NET, and applied AI.",
+    "I am a Software Engineering graduate from IQRA University focused on full-stack development with React, Next.js, and TypeScript. My work also spans backend services, databases, .NET, and applied AI.",
     "Through engineering internships and independent projects, I have built web applications, asynchronous backend systems, npm packages, and developer tools with an emphasis on reliability, clear architecture, and practical value.",
   ],
 } as const;

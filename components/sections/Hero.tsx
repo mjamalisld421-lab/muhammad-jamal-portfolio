@@ -11,7 +11,7 @@ export function Hero() {
         <div className="max-w-4xl">
           <div className="mb-7 inline-flex items-center gap-2 rounded-full border border-accent-soft bg-accent-subtle px-3.5 py-2 text-sm font-semibold text-accent-strong">
             <span className="h-2 w-2 rounded-full bg-accent" aria-hidden="true" />
-            Software Engineer Intern · Islamabad
+            Software Engineering graduate · Islamabad
           </div>
           <p className="mb-3 text-lg font-medium text-muted-foreground sm:text-xl">Hello, I&apos;m</p>
           <h1 className="text-balance text-5xl font-semibold leading-[0.96] tracking-[-0.065em] text-foreground sm:text-7xl lg:text-[5.5rem]">
@@ -21,7 +21,7 @@ export function Hero() {
             Building modern web products, developer tools, backend systems, and applied AI.
           </p>
           <p className="mt-6 max-w-2xl text-pretty text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-            Final-year Software Engineering student and full-stack developer working across Next.js, TypeScript, databases, .NET, and computer vision.
+            Software Engineering graduate and full-stack developer working across Next.js, TypeScript, databases, .NET, and computer vision.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button href="#projects">View selected work</Button>

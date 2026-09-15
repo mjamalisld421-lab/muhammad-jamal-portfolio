@@ -7,7 +7,7 @@ export function Experience() {
   return (
     <section id="experience" className="scroll-mt-28 bg-surface py-20 sm:py-28">
       <Container>
-        <SectionHeading eyebrow="Experience" title="Learning by building, supporting, and shipping." description="A mix of software engineering, technical education, telecom systems, and research-led work." />
+        <SectionHeading eyebrow="Experience" title="Technical experience built around real systems." description="Software engineering and telecom infrastructure work, with ByteFinch as the current focus." />
         <div className="mt-12 border-t border-border">
           {experiences.map((item, index) => (
             <article key={`${item.company}-${item.role}`} className="grid gap-5 border-b border-border py-8 md:grid-cols-[0.34fr_0.66fr] md:gap-12 md:py-10">

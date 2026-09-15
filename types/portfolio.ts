@@ -16,12 +16,14 @@ export interface Experience {
 
 export interface Project {
   name: string;
+  category: string;
   year?: string;
   period?: string;
-  type?: string;
   summary: string;
   technologies: string[];
   highlights: string[];
+  proof?: string;
+  liveUrl?: string;
   npmUrl?: string;
   githubUrl?: string;
   featured?: boolean;
