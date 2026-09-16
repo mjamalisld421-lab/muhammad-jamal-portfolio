@@ -28,10 +28,17 @@ export function Hero() {
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button href="#projects">View projects</Button>
+            <Button
+              href="/resume/Muhammad-Jamal-Resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              variant="secondary"
+            >
+              Resume <span aria-hidden="true">↗</span>
+            </Button>
             <Button href="https://github.com/mjamalisld421-lab" target="_blank" rel="noopener noreferrer" variant="secondary">
               GitHub <span aria-hidden="true">↗</span>
             </Button>
-            <Button href="#contact" variant="ghost">Contact me</Button>
           </div>
         </div>
         <dl className="mt-16 grid max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-[var(--radius-card)] border border-border bg-border sm:grid-cols-3">
