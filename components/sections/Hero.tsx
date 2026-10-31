@@ -29,7 +29,7 @@ export function Hero() {
           <div className="mt-9 flex flex-wrap gap-3">
             <Button href="#projects">View projects</Button>
             <Button
-              href="/resume/Muhammad-Jamal-Resume.pdf"
+              href="https://drive.google.com/file/d/1IXjwxallZ9yGLCNEoA0dw9wfCUm7KNP1/view?usp=drive_link"
               target="_blank"
               rel="noopener noreferrer"
               variant="secondary"
