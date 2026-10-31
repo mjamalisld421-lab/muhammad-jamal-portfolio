@@ -24,6 +24,27 @@ export function Projects() {
                 Group A
               </p>
               <h3 className="mt-2 text-xl font-semibold tracking-[-0.025em] text-foreground sm:text-2xl">
+                Deployed projects
+              </h3>
+            </div>
+            <p className="hidden text-sm text-muted-foreground sm:block">
+              Web applications and supporting work
+            </p>
+          </div>
+          <div className="mt-6 grid gap-5 md:grid-cols-2">
+            {earlierProjects.map((project) => (
+              <ProjectCard key={project.name} project={project} />
+            ))}
+          </div>
+        </div>
+
+        <div className="mt-20 sm:mt-24">
+          <div className="flex items-end justify-between gap-4 border-b border-border pb-5">
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
+                Group B
+              </p>
+              <h3 className="mt-2 text-xl font-semibold tracking-[-0.025em] text-foreground sm:text-2xl">
                 Featured engineering work
               </h3>
             </div>
@@ -38,27 +59,6 @@ export function Projects() {
                 project={project}
                 prominent={index === 0}
               />
-            ))}
-          </div>
-        </div>
-
-        <div className="mt-20 sm:mt-24">
-          <div className="flex items-end justify-between gap-4 border-b border-border pb-5">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.18em] text-accent">
-                Group B
-              </p>
-              <h3 className="mt-2 text-xl font-semibold tracking-[-0.025em] text-foreground sm:text-2xl">
-                Deployed and earlier projects
-              </h3>
-            </div>
-            <p className="hidden text-sm text-muted-foreground sm:block">
-              Web applications and supporting work
-            </p>
-          </div>
-          <div className="mt-6 grid gap-5 md:grid-cols-2">
-            {earlierProjects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
             ))}
           </div>
         </div>

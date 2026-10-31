@@ -105,6 +105,22 @@ export const projects: Project[] = [
     featured: true,
   },
   {
+    name: "Student Management System",
+    category: ".NET Web Application",
+    year: "2026",
+    summary:
+      "Relational web application for managing student records, courses, enrollments, and grades.",
+    technologies: ["ASP.NET Core", "C#", "Entity Framework Core", "SQLite"],
+    highlights: [
+      "Student, course, enrollment, and grade CRUD",
+      "Search, filtering, and validation",
+      "Relational persistence",
+    ],
+    liveUrl: "https://jamal-student-management.runasp.net/",
+    githubUrl:
+      "https://github.com/mjamalisld421-lab/student-management-system-dotnet",
+  },
+  {
     name: "Job Tracker App",
     category: "Full-Stack Web Application",
     year: "2026",
@@ -152,21 +168,6 @@ export const projects: Project[] = [
     liveUrl: "https://shopease-ecommerce-store.vercel.app/products",
     githubUrl:
       "https://github.com/mjamalisld421-lab/shopease-ecommerce-store",
-  },
-  {
-    name: "Student Management System",
-    category: ".NET Web Application",
-    year: "2026",
-    summary:
-      "Relational web application for managing student records, courses, enrollments, and grades.",
-    technologies: ["ASP.NET Core", "C#", "Entity Framework Core", "SQLite"],
-    highlights: [
-      "Student, course, enrollment, and grade CRUD",
-      "Search, filtering, and validation",
-      "Relational persistence",
-    ],
-    githubUrl:
-      "https://github.com/mjamalisld421-lab/student-management-system-dotnet",
   },
 ];
 
