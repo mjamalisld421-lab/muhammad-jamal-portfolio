@@ -5,7 +5,7 @@ import { profile } from "@/data/portfolio";
 const focusAreas = [
   { number: "01", title: "Web applications", copy: "Responsive, typed experiences built with React and Next.js." },
   { number: "02", title: "Backend systems", copy: "APIs, relational data, job queues, authentication, and reliable workflows." },
-  { number: "03", title: "Developer tooling", copy: "Practical command-line tools for dependency analysis and architecture checks." },
+  { number: "03", title: "AI engineering", copy: "Evidence-aware extraction, evaluation, secure inference, and human approval workflows." },
 ];
 
 export function About() {

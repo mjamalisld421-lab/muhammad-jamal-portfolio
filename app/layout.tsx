@@ -23,7 +23,7 @@ export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
   title: "Muhammad Jamal | Software Engineer",
   description:
-    "Software Engineer and Full-Stack Developer building web applications, backend systems, developer tooling, and applied AI projects.",
+    "Software Engineer building full-stack applications, secure backend systems, developer tooling, and production AI document-processing workflows.",
   applicationName: "Muhammad Jamal Portfolio",
   authors: [{ name: "Muhammad Jamal" }],
   creator: "Muhammad Jamal",
@@ -34,20 +34,25 @@ export const metadata: Metadata = {
     "TypeScript",
     "Backend Engineering",
     "Developer Tooling",
+    "AI Engineering",
+    "Generative AI",
+    "Intelligent Document Processing",
+    "Cloudflare Workers AI",
+    "Large Language Models",
   ],
   openGraph: {
     type: "website",
     locale: "en_US",
     title: "Muhammad Jamal | Software Engineer",
     description:
-      "Software Engineer and Full-Stack Developer building web applications, backend systems, developer tooling, and applied AI projects.",
+      "Software Engineer building full-stack applications, secure backend systems, developer tooling, and production AI document-processing workflows.",
     siteName: "Muhammad Jamal Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Muhammad Jamal | Software Engineer",
     description:
-      "Software Engineer and Full-Stack Developer building web applications, backend systems, developer tooling, and applied AI projects.",
+      "Software Engineer building full-stack applications, secure backend systems, developer tooling, and production AI document-processing workflows.",
   },
   robots: {
     index: true,
