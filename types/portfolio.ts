@@ -23,6 +23,9 @@ export interface Project {
   technologies: string[];
   highlights: string[];
   proof?: string;
+  status?: string;
+  imageUrl?: string;
+  caseStudyUrl?: string;
   liveUrl?: string;
   npmUrl?: string;
   githubUrl?: string;

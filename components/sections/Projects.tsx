@@ -1,10 +1,18 @@
 import { FeaturedProjectCard } from "@/components/projects/FeaturedProjectCard";
+import { FlagshipProjectCard } from "@/components/projects/FlagshipProjectCard";
 import { ProjectCard } from "@/components/projects/ProjectCard";
 import { Container } from "@/components/ui/Container";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { earlierProjects, featuredProjects } from "@/data/projects";
 
 export function Projects() {
+  const flagshipProject = earlierProjects.find(
+    (project) => project.name === "DocuFlow AI",
+  );
+  const deployedProjects = earlierProjects.filter(
+    (project) => project.name !== "DocuFlow AI",
+  );
+
   return (
     <section
       id="projects"
@@ -13,8 +21,8 @@ export function Projects() {
       <Container>
         <SectionHeading
           eyebrow="Projects"
-          title="Software engineering work, from architecture tools to applied AI."
-          description="Selected projects demonstrating full-stack development, backend systems, developer tooling, and practical computer vision."
+          title="Production systems, developer tools, and applied AI."
+          description="Selected projects demonstrating AI engineering, full-stack development, secure backend systems, developer tooling, and practical computer vision."
         />
 
         <div className="mt-14">
@@ -31,10 +39,15 @@ export function Projects() {
               Web applications and supporting work
             </p>
           </div>
-          <div className="mt-6 grid gap-5 md:grid-cols-2">
-            {earlierProjects.map((project) => (
+          <div className="mt-6 space-y-5">
+            {flagshipProject ? (
+              <FlagshipProjectCard project={flagshipProject} />
+            ) : null}
+            <div className="grid gap-5 md:grid-cols-2">
+            {deployedProjects.map((project) => (
               <ProjectCard key={project.name} project={project} />
             ))}
+            </div>
           </div>
         </div>
 

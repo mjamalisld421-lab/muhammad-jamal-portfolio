@@ -2,6 +2,34 @@ import type { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
+    name: "DocuFlow AI",
+    category: "Artificial Intelligence / Full-Stack Engineering",
+    year: "2026",
+    status: "Live in Production",
+    summary:
+      "A production-deployed intelligent document processing platform that turns invoices, receipts, and purchase orders into validated financial data through browser-side OCR, hybrid extraction, and human approval.",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Cloudflare Workers",
+      "Workers AI",
+      "D1",
+      "PDF.js",
+      "Tesseract.js",
+      "Zod",
+    ],
+    highlights: [
+      "41/41 automated tests passing with strict TypeScript, ESLint, and production build checks",
+      "94.20% deterministic field accuracy across a 12-document fictional evaluation corpus",
+      "15/15 verified hybrid fields across two fictional production acceptance documents",
+      "Signed Access JWT verification, tenant-scoped data, AI quotas, audit logs, and approval-gated exports",
+    ],
+    proof: "Production AI · 41 tests · evidence-aware extraction",
+    imageUrl: "/projects/docuflow-ai/thumbnail.png",
+    caseStudyUrl: "/projects/docuflow-ai",
+    liveUrl: "https://docuflow-ai.mjamalisld421.workers.dev",
+  },
+  {
     name: "Monorepo Dependency Boundary Checker",
     category: "Developer Tooling / CLI",
     year: "2026",
