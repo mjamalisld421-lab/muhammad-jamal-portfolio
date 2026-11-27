@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Link from "next/link";
 import { Footer } from "@/components/layout/Footer";
 import { Button } from "@/components/ui/Button";
@@ -25,21 +24,12 @@ export const metadata: Metadata = {
     description:
       "How a secure hybrid extraction pipeline turns business documents into validated financial data while keeping humans in control.",
     type: "article",
-    images: [
-      {
-        url: "/projects/docuflow-ai/thumbnail.png",
-        width: 1440,
-        height: 900,
-        alt: "DocuFlow AI production application",
-      },
-    ],
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "DocuFlow AI — AI Engineering Case Study",
     description:
       "Production document processing with browser OCR, Workers AI, evidence verification, and human approval.",
-    images: ["/projects/docuflow-ai/thumbnail.png"],
   },
 };
 
@@ -181,7 +171,7 @@ export default function DocuFlowCaseStudy() {
               </p>
               <div className="mt-8 flex flex-wrap gap-3">
                 <Button href={liveUrl} target="_blank" rel="noopener noreferrer">
-                  Explore public demo <span className="ml-1.5" aria-hidden="true">↗</span>
+                  Live Application <span className="ml-1.5" aria-hidden="true">↗</span>
                 </Button>
                 <Button href="/#projects" variant="secondary">
                   Back to projects <span className="ml-1.5" aria-hidden="true">←</span>
@@ -192,15 +182,17 @@ export default function DocuFlowCaseStudy() {
               </p>
             </div>
 
-            <div className="relative mt-14 aspect-[16/10] overflow-hidden rounded-[calc(var(--radius-card)+0.5rem)] border border-border bg-surface shadow-[var(--shadow-soft)] sm:mt-16">
-              <Image
-                src="/projects/docuflow-ai/thumbnail.png"
-                alt="DocuFlow AI production landing page showing its document intelligence workflow"
-                fill
-                priority
-                sizes="(min-width: 1280px) 1200px, 100vw"
-                className="object-cover object-top"
-              />
+            <div className="mt-14 grid gap-4 border-t border-border pt-8 sm:mt-16 sm:grid-cols-3">
+              {[
+                ["41 / 41", "Automated tests passing"],
+                ["94.20%", "Deterministic field accuracy"],
+                ["15 / 15", "Verified hybrid fields"],
+              ].map(([value, label]) => (
+                <div key={label} className="border-l-2 border-accent pl-4">
+                  <p className="text-2xl font-semibold tracking-[-0.04em] text-foreground">{value}</p>
+                  <p className="mt-1 text-sm text-muted-foreground">{label}</p>
+                </div>
+              ))}
             </div>
           </Container>
         </section>
@@ -366,41 +358,6 @@ export default function DocuFlowCaseStudy() {
           </Container>
         </section>
 
-        <section className="py-20 sm:py-28">
-          <Container>
-            <SectionLabel>Genuine application screenshots</SectionLabel>
-            <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-5xl">
-              A safe public demo that mirrors the review workflow.
-            </h2>
-            <p className="mt-5 max-w-3xl text-lg leading-8 text-muted-foreground">
-              These screenshots were captured from the production application using fictional records. No private documents, emails, tokens, or account identifiers are shown.
-            </p>
-            <div className="mt-12 grid gap-5 lg:grid-cols-2">
-              {[
-                ["public-demo-invoice.png", "Invoice extraction and validation"],
-                ["public-demo-receipt.png", "Receipt review workspace"],
-                ["public-demo-purchase-order.png", "Purchase-order structured fields"],
-                ["public-demo-approved.png", "Human approval state"],
-              ].map(([file, label]) => (
-                <figure key={file} className="overflow-hidden rounded-[var(--radius-card)] border border-border bg-surface shadow-[var(--shadow-soft)]">
-                  <div className="relative aspect-[4/3] overflow-hidden bg-[#eef3ff]">
-                    <Image
-                      src={`/projects/docuflow-ai/${file}`}
-                      alt={`DocuFlow AI ${label.toLowerCase()}`}
-                      fill
-                      sizes="(min-width: 1024px) 50vw, 100vw"
-                      className="object-cover object-top"
-                    />
-                  </div>
-                  <figcaption className="border-t border-border px-5 py-4 text-sm font-medium text-foreground">
-                    {label}
-                  </figcaption>
-                </figure>
-              ))}
-            </div>
-          </Container>
-        </section>
-
         <section className="border-y border-border bg-surface py-20 sm:py-28">
           <Container>
             <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-20">
@@ -446,17 +403,18 @@ export default function DocuFlowCaseStudy() {
         <section className="pb-20 sm:pb-28">
           <Container>
             <div className="overflow-hidden rounded-[calc(var(--radius-card)+0.5rem)] bg-foreground px-6 py-12 text-background sm:px-10 sm:py-16">
-              <SectionLabel>Live demonstration</SectionLabel>
+              <SectionLabel>Conclusion</SectionLabel>
               <h2 className="mt-4 max-w-3xl text-3xl font-semibold tracking-[-0.04em] sm:text-5xl">
-                Explore the workflow without accessing private business documents.
+                Reliable document intelligence depends on evidence and human control.
               </h2>
               <p className="mt-5 max-w-2xl text-base leading-7 text-background/70">
-                The public interactive demonstration uses fictional invoice,
-                receipt, and purchase-order data and performs no anonymous database writes.
+                DocuFlow AI demonstrates a production-minded approach to applied AI:
+                bounded inputs, transparent fallbacks, verified model output, secure
+                tenant boundaries, and approval before financial data leaves the system.
               </p>
               <div className="mt-8">
                 <Button href={liveUrl} target="_blank" rel="noopener noreferrer" variant="secondary">
-                  Open DocuFlow AI <span className="ml-1.5" aria-hidden="true">↗</span>
+                  Live Application <span className="ml-1.5" aria-hidden="true">↗</span>
                 </Button>
               </div>
             </div>

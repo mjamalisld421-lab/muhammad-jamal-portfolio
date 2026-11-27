@@ -1,30 +1,22 @@
-import Image from "next/image";
 import { ProjectActions } from "@/components/projects/ProjectActions";
 import { TechBadge } from "@/components/ui/TechBadge";
 import type { Project } from "@/types/portfolio";
 
 export function FlagshipProjectCard({ project }: { project: Project }) {
   return (
-    <article className="overflow-hidden rounded-[calc(var(--radius-card)+0.5rem)] border border-border bg-surface shadow-[var(--shadow-soft)]">
-      {project.imageUrl ? (
-        <div className="relative aspect-[16/9] overflow-hidden border-b border-border bg-[#eef3ff]">
-          <Image
-            src={project.imageUrl}
-            alt="DocuFlow AI production landing page"
-            fill
-            priority
-            sizes="(min-width: 1024px) 1200px, 100vw"
-            className="object-cover object-top"
-          />
-          <div className="absolute left-5 top-5 rounded-full border border-white/70 bg-white/90 px-3 py-1.5 text-xs font-bold text-[#173564] shadow-sm backdrop-blur sm:left-7 sm:top-7">
-            {project.status}
-          </div>
-        </div>
-      ) : null}
-      <div className="grid gap-8 p-6 sm:p-8 lg:grid-cols-[1.05fr_0.95fr] lg:gap-12 lg:p-10">
+    <article className="flex h-full flex-col rounded-[calc(var(--radius-card)+0.5rem)] border border-border bg-surface p-6 shadow-[var(--shadow-soft)] sm:p-8 lg:p-10">
+      <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-5">
+        <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">
+          Flagship project
+        </p>
+        <span className="rounded-full border border-accent-soft bg-accent-subtle px-3 py-1.5 text-xs font-semibold text-accent-strong">
+          {project.status}
+        </span>
+      </div>
+      <div className="flex flex-1 flex-col pt-7">
         <div>
-          <p className="text-xs font-bold uppercase tracking-[0.16em] text-accent">
-            Flagship project · {project.category}
+          <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
+            {project.category}
           </p>
           <h3 className="mt-4 text-3xl font-semibold tracking-[-0.04em] text-foreground sm:text-4xl">
             {project.name}
@@ -42,11 +34,8 @@ export function FlagshipProjectCard({ project }: { project: Project }) {
               <TechBadge key={technology}>{technology}</TechBadge>
             ))}
           </div>
-          <div className="mt-7">
-            <ProjectActions project={project} />
-          </div>
         </div>
-        <div className="border-t border-border pt-7 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0">
+        <div className="mt-8 border-t border-border pt-7">
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
             Verified engineering evidence
           </p>
@@ -61,11 +50,14 @@ export function FlagshipProjectCard({ project }: { project: Project }) {
               </li>
             ))}
           </ul>
-          <p className="mt-6 text-xs leading-5 text-muted-foreground">
-            Source repository is private. The case study documents architecture,
-            security decisions, evaluation scope, and known limitations without
-            exposing private source code.
-          </p>
+          {project.sourceNote ? (
+            <p className="mt-6 text-xs leading-5 text-muted-foreground">
+              {project.sourceNote}
+            </p>
+          ) : null}
+        </div>
+        <div className="mt-auto pt-8">
+          <ProjectActions project={project} />
         </div>
       </div>
     </article>

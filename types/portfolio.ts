@@ -29,6 +29,12 @@ export interface Project {
   liveUrl?: string;
   npmUrl?: string;
   githubUrl?: string;
+  actions?: {
+    label: string;
+    href: string;
+    external: boolean;
+  }[];
+  sourceNote?: string;
   featured?: boolean;
 }
 

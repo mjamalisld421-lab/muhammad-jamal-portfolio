@@ -8,7 +8,7 @@ export function ProjectActions({
   project: Project;
   compact?: boolean;
 }) {
-  const links = [
+  const defaultLinks = [
     project.liveUrl
       ? { label: "Live Demo", href: project.liveUrl, external: true }
       : null,
@@ -25,6 +25,7 @@ export function ProjectActions({
     (link): link is { label: string; href: string; external: boolean } =>
       Boolean(link),
   );
+  const links = project.actions ?? defaultLinks;
 
   if (!links.length) {
     return null;

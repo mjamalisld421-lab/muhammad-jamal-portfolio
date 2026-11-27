@@ -25,9 +25,74 @@ export const projects: Project[] = [
       "Signed Access JWT verification, tenant-scoped data, AI quotas, audit logs, and approval-gated exports",
     ],
     proof: "Production AI · 41 tests · evidence-aware extraction",
-    imageUrl: "/projects/docuflow-ai/thumbnail.png",
     caseStudyUrl: "/projects/docuflow-ai",
     liveUrl: "https://docuflow-ai.mjamalisld421.workers.dev",
+    actions: [
+      {
+        label: "Live Application",
+        href: "https://docuflow-ai.mjamalisld421.workers.dev",
+        external: true,
+      },
+      {
+        label: "Read Case Study",
+        href: "/projects/docuflow-ai",
+        external: false,
+      },
+    ],
+    sourceNote:
+      "The source repository is private. The case study documents verified architecture, evaluation scope, security decisions, and known limitations.",
+  },
+  {
+    name: "RelayForge",
+    category: "Distributed Systems / Backend Engineering",
+    year: "2026",
+    status: "Production Deployment Verified",
+    summary:
+      "A production-oriented, multi-tenant background job and webhook platform built around durable PostgreSQL state, independently scalable Rust workers, and an operational Next.js control plane.",
+    technologies: [
+      "Rust",
+      "Axum",
+      "Tokio",
+      "PostgreSQL",
+      "SQLx",
+      "Next.js",
+      "TypeScript",
+      "Playwright",
+    ],
+    highlights: [
+      "Transactional SKIP LOCKED claims, renewable leases, and fencing tokens recover abandoned work and reject stale completions",
+      "35 Rust/PostgreSQL tests and six browser scenarios passed, including process-level crash and database outage drills",
+      "Four workers reduced end-to-end P95 from 11.21 seconds to 953 ms in the measured 100-job local workload",
+      "Tenant-scoped APIs, RBAC, API keys, quotas, audit trails, encrypted webhook secrets, HMAC signing, and SSRF defenses",
+    ],
+    proof: "Rust infrastructure · crash recovery · measured concurrency",
+    caseStudyUrl: "/projects/relayforge",
+    liveUrl: "https://relayforge-dashboard.vercel.app",
+    githubUrl: "https://github.com/mjamalisld421-lab/relayforge",
+    actions: [
+      {
+        label: "Live Application",
+        href: "https://relayforge-dashboard.vercel.app",
+        external: true,
+      },
+      {
+        label: "Interactive Demo",
+        href: "https://relayforge-dashboard.vercel.app/demo",
+        external: true,
+      },
+      {
+        label: "View Source Code",
+        href: "https://github.com/mjamalisld421-lab/relayforge",
+        external: true,
+      },
+      {
+        label: "Read Case Study",
+        href: "/projects/relayforge",
+        external: false,
+      },
+    ],
+    sourceNote:
+      "Public source, architecture notes, release evidence, benchmark scope, and known limitations are documented in the repository.",
   },
   {
     name: "Monorepo Dependency Boundary Checker",

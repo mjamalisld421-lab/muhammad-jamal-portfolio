@@ -6,11 +6,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { earlierProjects, featuredProjects } from "@/data/projects";
 
 export function Projects() {
-  const flagshipProject = earlierProjects.find(
-    (project) => project.name === "DocuFlow AI",
+  const flagshipNames = new Set(["DocuFlow AI", "RelayForge"]);
+  const flagshipProjects = earlierProjects.filter((project) =>
+    flagshipNames.has(project.name),
   );
   const deployedProjects = earlierProjects.filter(
-    (project) => project.name !== "DocuFlow AI",
+    (project) => !flagshipNames.has(project.name),
   );
 
   return (
@@ -40,13 +41,15 @@ export function Projects() {
             </p>
           </div>
           <div className="mt-6 space-y-5">
-            {flagshipProject ? (
-              <FlagshipProjectCard project={flagshipProject} />
-            ) : null}
+            <div className="grid gap-5 xl:grid-cols-2">
+              {flagshipProjects.map((project) => (
+                <FlagshipProjectCard key={project.name} project={project} />
+              ))}
+            </div>
             <div className="grid gap-5 md:grid-cols-2">
-            {deployedProjects.map((project) => (
-              <ProjectCard key={project.name} project={project} />
-            ))}
+              {deployedProjects.map((project) => (
+                <ProjectCard key={project.name} project={project} />
+              ))}
             </div>
           </div>
         </div>
