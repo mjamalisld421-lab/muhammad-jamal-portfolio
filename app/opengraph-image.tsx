@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 export const alt =
-  "Muhammad Jamal — Software Engineer and Full-Stack Developer";
+  "Muhammad Jamal — Software Engineer, Applied AI and Data Science";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -79,7 +79,7 @@ export default function OpenGraphImage() {
                 marginTop: 24,
               }}
             >
-              Software Engineer · Full-Stack Developer
+              Software Engineer · Applied AI · Data Science
             </div>
           </div>
           <div
@@ -90,7 +90,7 @@ export default function OpenGraphImage() {
               fontWeight: 600,
             }}
           >
-            Web applications · Backend systems · Developer tooling · Applied AI
+            Machine learning · Computer vision · Full-stack · Distributed systems
           </div>
         </div>
       </div>

@@ -21,9 +21,9 @@ const metadataBase = configuredSiteUrl
 
 export const metadata: Metadata = {
   ...(metadataBase ? { metadataBase } : {}),
-  title: "Muhammad Jamal | Software Engineer",
+  title: "Muhammad Jamal | Software Engineer, Applied AI & Data Science",
   description:
-    "Software Engineer building full-stack applications, secure backend systems, developer tooling, and production AI document-processing workflows.",
+    "Software Engineer working across applied AI, machine learning, data science, computer vision, full-stack development, backend engineering, and distributed systems.",
   applicationName: "Muhammad Jamal Portfolio",
   authors: [{ name: "Muhammad Jamal" }],
   creator: "Muhammad Jamal",
@@ -35,6 +35,18 @@ export const metadata: Metadata = {
     "Backend Engineering",
     "Developer Tooling",
     "AI Engineering",
+    "Applied AI",
+    "Machine Learning",
+    "Data Science",
+    "Data Analytics",
+    "Computer Vision",
+    "Python",
+    "PyTorch",
+    "Vision Transformers",
+    "Pakistan Sign Language Recognition",
+    "Deep Learning",
+    "AI Model Serving",
+    "Distributed Systems",
     "Generative AI",
     "Intelligent Document Processing",
     "Cloudflare Workers AI",
@@ -43,16 +55,16 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    title: "Muhammad Jamal | Software Engineer",
+    title: "Muhammad Jamal | Software Engineer, Applied AI & Data Science",
     description:
-      "Software Engineer building full-stack applications, secure backend systems, developer tooling, and production AI document-processing workflows.",
+      "Applied AI research, intelligent software products, full-stack applications, and distributed backend systems.",
     siteName: "Muhammad Jamal Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Muhammad Jamal | Software Engineer",
+    title: "Muhammad Jamal | Software Engineer, Applied AI & Data Science",
     description:
-      "Software Engineer building full-stack applications, secure backend systems, developer tooling, and production AI document-processing workflows.",
+      "Applied AI research, intelligent software products, full-stack applications, and distributed backend systems.",
   },
   robots: {
     index: true,

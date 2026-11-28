@@ -2,9 +2,9 @@ import { ProjectActions } from "@/components/projects/ProjectActions";
 import { TechBadge } from "@/components/ui/TechBadge";
 import type { Project } from "@/types/portfolio";
 
-export function FlagshipProjectCard({ project }: { project: Project }) {
+export function FlagshipProjectCard({ project, prominent = false }: { project: Project; prominent?: boolean }) {
   return (
-    <article className="flex h-full flex-col rounded-[calc(var(--radius-card)+0.5rem)] border border-border bg-surface p-6 shadow-[var(--shadow-soft)] sm:p-8 lg:p-10">
+    <article className={`flex h-full flex-col rounded-[calc(var(--radius-card)+0.5rem)] border bg-surface p-6 shadow-[var(--shadow-soft)] sm:p-8 lg:p-10 ${prominent ? "border-accent-soft" : "border-border"}`}>
       <div className="flex flex-wrap items-center justify-between gap-3 border-b border-border pb-5">
         <p className="text-xs font-bold uppercase tracking-[0.18em] text-accent">
           Flagship project
@@ -13,7 +13,7 @@ export function FlagshipProjectCard({ project }: { project: Project }) {
           {project.status}
         </span>
       </div>
-      <div className="flex flex-1 flex-col pt-7">
+      <div className={`flex flex-1 flex-col pt-7 ${prominent ? "lg:grid lg:grid-cols-[1.08fr_0.92fr] lg:gap-12" : ""}`}>
         <div>
           <p className="text-xs font-semibold uppercase tracking-[0.14em] text-muted-foreground">
             {project.category}
@@ -35,7 +35,7 @@ export function FlagshipProjectCard({ project }: { project: Project }) {
             ))}
           </div>
         </div>
-        <div className="mt-8 border-t border-border pt-7">
+        <div className={`mt-8 border-t border-border pt-7 ${prominent ? "lg:mt-0 lg:border-l lg:border-t-0 lg:pl-12 lg:pt-0" : ""}`}>
           <p className="text-xs font-semibold uppercase tracking-[0.16em] text-muted-foreground">
             Verified engineering evidence
           </p>
@@ -56,7 +56,7 @@ export function FlagshipProjectCard({ project }: { project: Project }) {
             </p>
           ) : null}
         </div>
-        <div className="mt-auto pt-8">
+        <div className={`mt-auto pt-8 ${prominent ? "lg:col-span-2" : ""}`}>
           <ProjectActions project={project} />
         </div>
       </div>

@@ -44,7 +44,7 @@ export function ProjectActions({
                 "aria-label": `${link.label} for ${project.name} (opens in a new tab)`,
               }
             : { "aria-label": `${link.label} for ${project.name}` })}
-          variant={index === 0 && project.liveUrl ? "primary" : "secondary"}
+          variant={index === 0 ? "primary" : "secondary"}
           className={compact ? "min-h-10 px-4 py-2 text-xs" : ""}
         >
           {link.label}

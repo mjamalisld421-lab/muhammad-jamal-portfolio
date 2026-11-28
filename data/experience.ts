@@ -6,11 +6,12 @@ export const experiences: Experience[] = [
     company: "ByteFinch Technologies",
     period: "2026",
     summary:
-      "Built JavaScript and TypeScript developer tooling, backend systems, React interfaces, and npm packages with a strong focus on testing and reliability.",
+      "Built developer tooling, a NestJS and PostgreSQL report-generation platform, React interfaces, and published npm utilities with a focus on reliability and maintainability.",
     highlights: [
       "Worked on the Task Dependency Resolver, LRU Cache, npm-shame, and Monorepo Dependency Boundary Checker.",
-      "Developed an asynchronous NestJS report service and its React dashboard.",
+      "Developed an asynchronous NestJS report service and React/TypeScript dashboard using Prisma, Redis, BullMQ, JWT authentication, RBAC, and structured CSV/JSON exports.",
       "Applied automated testing, deterministic CLI behavior, and architecture-boundary analysis across engineering tasks.",
+      "Maintained and debugged SAD Payroll software, investigating defects and delivering focused bug fixes.",
     ],
     technologies: [
       "TypeScript",

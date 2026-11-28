@@ -20,6 +20,14 @@ export function Footer() {
           >
             GitHub <span aria-hidden="true">↗</span>
           </a>
+          <a
+            href="https://www.linkedin.com/in/muhammad-jamal-46aa47420/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="rounded-sm hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            LinkedIn <span aria-hidden="true">↗</span>
+          </a>
         </div>
       </Container>
     </footer>

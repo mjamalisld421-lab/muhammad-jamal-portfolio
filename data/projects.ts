@@ -2,6 +2,42 @@ import type { Project } from "@/types/portfolio";
 
 export const projects: Project[] = [
   {
+    name: "UniSigner",
+    category: "Applied AI, Data Science & Computer Vision Research",
+    period: "Feb 2025 – 2026",
+    status: "Flagship Research Project",
+    summary:
+      "A research-driven framework for isolated Pakistan Sign Language recognition and Urdu output, combining custom dataset engineering, spatial-temporal Vision Transformers, quantitative evaluation, model optimization, and GPU-accelerated application integration.",
+    technologies: [
+      "Python",
+      "PyTorch",
+      "OpenCV",
+      "NumPy",
+      "Vision Transformers",
+      "FastAPI",
+      "CUDA",
+      "Flutter",
+      "ExecuTorch",
+    ],
+    highlights: [
+      "114.19M-parameter UniSignFormerV2 combining ViT-Base/8 spatial encoding with a four-layer Temporal Transformer",
+      "200 stored video samples across eight balanced isolated-word classes, with explicit provenance and split limitations",
+      "75.00% held-out file-level accuracy and 73.47% macro F1 across 32 test files; not signer-independent",
+      "74.64% exported model storage reduction from 435.82 MB FP32 to 110.51 MB INT8 XNNPACK",
+    ],
+    proof: "200 videos · 8 classes · 114.19M parameters · 74.64% storage reduction",
+    caseStudyUrl: "/projects/unisigner",
+    actions: [
+      {
+        label: "Explore Research Case Study",
+        href: "/projects/unisigner",
+        external: false,
+      },
+    ],
+    sourceNote:
+      "Three-person academic research project. Personal contributions focus on data acquisition, dataset engineering, exploratory analysis, evaluation, diagnostics, and research documentation.",
+  },
+  {
     name: "DocuFlow AI",
     category: "Artificial Intelligence / Full-Stack Engineering",
     year: "2026",
@@ -171,29 +207,6 @@ export const projects: Project[] = [
       "Report creation with cursor pagination",
       "Async polling and loading, error, and empty states",
       "Completed and failed states with report downloads",
-    ],
-    featured: true,
-  },
-  {
-    name: "UniSigner",
-    category: "Final Year Project / Applied AI",
-    period: "Feb 2025 – 2026",
-    summary:
-      "Pakistan Sign Language to Urdu recognition prototype combining computer vision and temporal sequence modelling.",
-    technologies: [
-      "PyTorch",
-      "OpenCV",
-      "ViT-B/8",
-      "Temporal Transformer",
-      "Flutter",
-      "FastAPI",
-      "WebSockets",
-    ],
-    highlights: [
-      "8-sign prototype trained with a 200-video dataset",
-      "30-frame RGB input processed by UniSignFormerV2",
-      "ViT-Base/8 spatial encoding with a temporal Transformer",
-      "Mobile-to-cloud inference workflow",
     ],
     featured: true,
   },

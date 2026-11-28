@@ -6,7 +6,7 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { earlierProjects, featuredProjects } from "@/data/projects";
 
 export function Projects() {
-  const flagshipNames = new Set(["DocuFlow AI", "RelayForge"]);
+  const flagshipNames = new Set(["UniSigner", "DocuFlow AI", "RelayForge"]);
   const flagshipProjects = earlierProjects.filter((project) =>
     flagshipNames.has(project.name),
   );
@@ -22,8 +22,8 @@ export function Projects() {
       <Container>
         <SectionHeading
           eyebrow="Projects"
-          title="Production systems, developer tools, and applied AI."
-          description="Selected projects demonstrating AI engineering, full-stack development, secure backend systems, developer tooling, and practical computer vision."
+          title="Applied AI research, intelligent products, and reliable systems."
+          description="Three flagship projects connect dataset engineering and computer vision, production AI integration, and distributed backend reliability."
         />
 
         <div className="mt-14">
@@ -33,17 +33,19 @@ export function Projects() {
                 Group A
               </p>
               <h3 className="mt-2 text-xl font-semibold tracking-[-0.025em] text-foreground sm:text-2xl">
-                Deployed projects
+                Flagship engineering and research
               </h3>
             </div>
             <p className="hidden text-sm text-muted-foreground sm:block">
-              Web applications and supporting work
+              UniSigner · DocuFlow AI · RelayForge
             </p>
           </div>
           <div className="mt-6 space-y-5">
             <div className="grid gap-5 xl:grid-cols-2">
               {flagshipProjects.map((project) => (
-                <FlagshipProjectCard key={project.name} project={project} />
+                <div key={project.name} className={project.name === "UniSigner" ? "xl:col-span-2" : ""}>
+                  <FlagshipProjectCard project={project} prominent={project.name === "UniSigner"} />
+                </div>
               ))}
             </div>
             <div className="grid gap-5 md:grid-cols-2">

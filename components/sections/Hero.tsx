@@ -18,13 +18,13 @@ export function Hero() {
             {profile.name}
           </h1>
           <p className="mt-6 text-lg font-semibold tracking-[-0.02em] text-accent-strong sm:text-xl">
-            Software Engineer <span className="text-border-strong">/</span> Full-Stack Developer
+            Software Engineer <span className="text-border-strong">/</span> Applied AI, Machine Learning &amp; Data Science
           </p>
           <p className="mt-4 max-w-3xl text-balance text-2xl font-medium leading-tight tracking-[-0.03em] text-foreground sm:text-4xl">
-            Building modern web products, developer tools, backend systems, and applied AI.
+            Building intelligent software, dependable backend systems, and research-driven AI products.
           </p>
           <p className="mt-6 max-w-2xl text-pretty text-base leading-7 text-muted-foreground sm:text-lg sm:leading-8">
-            Software Engineering graduate and full-stack developer working across Next.js, TypeScript, databases, .NET, and computer vision.
+            Software Engineering graduate working across custom dataset engineering, deep learning, computer vision, distributed systems, and full-stack development.
           </p>
           <div className="mt-9 flex flex-wrap gap-3">
             <Button href="#projects">View projects</Button>
@@ -43,7 +43,7 @@ export function Hero() {
         </div>
         <dl className="mt-16 grid max-w-3xl grid-cols-1 gap-px overflow-hidden rounded-[var(--radius-card)] border border-border bg-border sm:grid-cols-3">
           {[
-            ["Current focus", "Full-stack engineering"],
+            ["Current focus", "Applied AI & software engineering"],
             ["Education", "BS Software Engineering"],
             ["Based in", profile.location],
           ].map(([term, detail]) => (
